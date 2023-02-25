@@ -6,7 +6,7 @@
 
 
 /* body { */
-  /* overflow: hidden; */
+/* overflow: hidden; */
 /* } */
 
 body,
@@ -15,11 +15,21 @@ body,
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
+.header {
+  height: 5vh;
+  /* width: auto; */
+  display: flex;
+  align-items: center;
+  font-size: xx-large;
+  justify-content: space-evenly;
+  color: #fff;
+  background-color: #20202f;
+}
+
 .background {
   margin: 0;
   padding: 0;
   background: linear-gradient(to top, white, rgb(190, 255, 255), white);
-  /* background: url("./advogado.jpg") no-repeat top center/cover; */
   width: 100%;
   height: 90vh;
 }
@@ -46,12 +56,46 @@ body,
   color: #FFFFFF;
 }
 
+.profile-container {
+  display: flex;
+  padding: 30px
+}
+
+.profile {
+  margin: 20px;
+  font-size: x-large;
+  border: 1px solid black;
+  border-radius: 10%;
+  box-shadow: 0 0 10px 5px rgba(1, 56, 98, 0.5),
+    0 5px 5px -5px rgba(0, 0, 0, 0.5),
+    0 -5px 5px -5px rgba(0, 0, 0, 0.5),
+    5px 0 5px -5px rgba(0, 0, 0, 0.5),
+    -5px 0 5px -5px rgba(0, 0, 0, 0.5);
+}
+
+.profile-image {
+  margin: 0 auto;
+  margin: 20px;
+  width: 195px;
+  border-radius: 50%;
+}
+
+.profile-text {
+  text-align: center;
+  /* font-family: 'Courier New', Courier, monospace; */
+}
+
+.about-text-profile {
+  font-size: xx-large;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .stacks-container-title {
   width: 100%;
-  font-size: 5vh;
+  font-size: x-large;
   /* margin: auto 140px;  */
   background-color: white;
-  height: 110px;
+  height: 60px;
 }
 
 .stack-container {
@@ -59,11 +103,9 @@ body,
   display: flex;
   flex-wrap: wrap;
   min-height: 300px;
-  margin: 8vh;
-  margin-bottom: 200px;
+  margin: auto;
+  margin-top: 80px;
   align-items: center;
-  /* margin-top: 10vh; */
-  margin-bottom: 1000px;
   background-color: rgb(202, 166, 217);
   text-align: center;
   overflow-x: auto;
@@ -79,16 +121,6 @@ body,
   cursor: pointer;
 }
 
-.header {
-  height: 5vh;
-  /* width: auto; */
-  display: flex;
-  align-items: center;
-  font-size: xx-large;
-  justify-content: space-evenly;
-  color: #fff;
-  background-color: #20202f;
-}
 
 footer {
   display: flex;
@@ -100,15 +132,6 @@ footer {
   bottom: 0;
   color: #fff;
 }
-
-
-
-.text-abount {
-  color: black;
-  font-size: 300%;
-  opacity: 1;
-}
-
 
 
 /* Referencia de código https://codepen.io/luizomf/pen/NWyYpXj */
