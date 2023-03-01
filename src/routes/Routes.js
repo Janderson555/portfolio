@@ -3,15 +3,16 @@ import React from 'react';
 import About from '../pages/About';
 import Projects from '../pages/Projects';
 import Contact from '../pages/Contact';
+import Home from '../pages/Home';
 
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<About />} />
+      <Route path="/" element={<Home />} />
       <Route exact path="/about" element={<About />} />
       <Route exact path="/projects" element={<Projects />} />
       <Route exact path="/contact" element={<Contact />} />
-      {/* <Route path="*" element={ <NotFound /> } /> */} */
+      <Route path="*" element={ <Home /> } />
     </Routes>
   );
 }

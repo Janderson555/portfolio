@@ -1,27 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import '../styles/pages/login.css';
 
 export default function Header() {
+  const pathPage = window.location.pathname;
   const navigate = useNavigate();
 
-  const toggleTheme = () => {
-    const button = document.querySelector('.toggle-button');
-    const footerIcons = document.querySelectorAll('.footer-icon');
-    document.body.classList.toggle("theme-dark");
-    button.classList.toggle('active')
-    
-    footerIcons.forEach((e) => {
-      e.classList.toggle('active')
-    })
-  }
+  useEffect(() => {
+    function navigateAndTabIndicator() {
+      const oldActive = document.querySelector('.header-button.active');
+      oldActive.classList.remove('active')
+
+      const path = window.location.pathname.replace('/', '')
+      const newActive = document.querySelector(`#${path}`)
+      newActive.classList.add('active')
+    }
+    navigateAndTabIndicator()
+
+  }, [pathPage])
 
   return (
     <header className="header">
-      <p className="header-text pointer" onClick={() => navigate('/about')}>SOBRE</p>
-      <p className="header-text pointer" onClick={() => navigate('/projects')}>PROJETOS</p>
-      <p className="header-text pointer" onClick={() => navigate('/contact')}>CONTATO</p>
-      <button class="toggle-button pointer" onClickCapture={toggleTheme}>THEME</button>
+      <p className="header-button active pointer" id="about" onClick={() => navigate('/about')}>SOBRE</p>
+      <p className="header-button pointer" id="projects" onClick={() => navigate('/projects')}>PROJETOS</p>
+      <p className="header-button pointer" id="contact" onClick={() => navigate('/contact')}>CONTATO</p>
+      {/* <button class="toggle-button pointer" >THEME</button> */}
     </header>
   );
 }

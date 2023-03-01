@@ -1,7 +1,6 @@
 import React from 'react';
 import Footer from './Footer';
 import Header from './Header';
-// import '../styles/pages/login.css';
 
 const arrayLinks = [
   "https://source.unsplash.com/random/250x250/?fruit",
