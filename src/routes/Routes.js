@@ -8,7 +8,7 @@ import Home from '../pages/Home';
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      {/* <Route path="/" element={<Home />} /> */}
       <Route exact path="/about" element={<About />} />
       <Route exact path="/projects" element={<Projects />} />
       <Route exact path="/contact" element={<Contact />} />
