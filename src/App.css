@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -15,12 +16,12 @@ body {
 }
 
 body,
-.header-button 
-{
+.header-button {
   transition: background-color 0.9s ease-in-out, color 0.5s ease-in-out;
 }
 
 .header {
+  top: 0;
   display: flex;
   position: fixed;
   height: 4.7rem;
@@ -41,18 +42,19 @@ body,
 }
 
 .background {
+  margin-top: 6rem;
   background: linear-gradient(to top, white, rgb(190, 255, 255), white);
 }
 
-.theme-dark {
+/* .theme-dark {
   background-color: #333333;
 }
 
 .theme-light {
   background-color: #FFFFFF;
-}
+} */
 
-.toggle-button {
+/* .toggle-button {
   background-color: #FFFFFF;
   color: #333333;
   border: none;
@@ -64,11 +66,10 @@ body,
 .toggle-button.active {
   background-color: #333333;
   color: #FFFFFF;
-}
+} */
 
 .profile-container {
   display: flex;
-  /* padding: 4.0rem */
 }
 
 .profile {
@@ -85,10 +86,9 @@ body,
 }
 
 .profile-image {
-  margin: 0 auto;
-  border: 0.1rem solid rgb(50, 78, 99);
   margin: 2.0rem;
   width: 19.5rem;
+  border: 0.1rem solid rgb(50, 78, 99);
   border-radius: 50%;
 }
 
@@ -96,9 +96,20 @@ body,
   text-align: center;
 }
 
-.about-text-profile {
+.about-title {
+  margin-left: 10rem;
+  font-size: 5rem;
+}
+
+.about-text {
+  text-indent: 8rem; /* Recua a primeira linha em 20 pixels */
+  word-spacing: 0.2rem;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-right: 10rem;
   font-size: 3.2rem;
-  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 0.15rem;
+  font-family: 'Lato', Courier, monospace;
 }
 
 .stacks-container-title {
@@ -177,9 +188,9 @@ body,
 .carousel-container {
   position: relative;
   display: flex;
-  padding: 3.0rem;
+  padding: 4.0rem;
   max-width: 84.0rem;
-  margin: 0 auto;
+  margin: 10rem auto;
 }
 
 .carousel-gallery-wrapper {
@@ -197,27 +208,27 @@ body,
 .arrow-right,
 .arrow-left {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: auto;
-  bottom: 0;
-  font-size: 2.0rem;
+  top: 2rem;
+  left: -1rem;
+  bottom: 2rem;
+  right: 0;
+  font-size: 3rem;
   line-height: 25.0rem;
   width: 4.0rem;
-  color: #fff;
   cursor: pointer;
   border: none;
-  background: linear-gradient(to left,
-      transparent 0%, black 200%);
-  opacity: 0.1;
-  transition: all 600ms ease-in-out;
+  background-color: blue;
+  background: linear-gradient(to top,
+    white,black, white, black, white);
+  opacity: 0.5;
+  transition: all 300ms ease-in-out;
 }
 
 .arrow-right {
   right: 0;
   left: auto;
-  background: linear-gradient(to right,
-      transparent 0%, black 200%);
+  /* background: linear-gradient(to top,
+    white, black, white, black); */
 }
 
 .arrow-left:hover,
@@ -229,7 +240,7 @@ body,
   width: 35.0rem;
   height: 50.0rem;
   flex-shrink: 0;
-  opacity: 0.2;
+  opacity: 0.1;
   transition: all 600ms ease-in-out;
   text-align: center;
 }

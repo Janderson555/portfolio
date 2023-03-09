@@ -11,7 +11,7 @@ import pythonIcon from './python-svgrepo-com.svg';
 
 import githubIcon from './github-svgrepo-com.svg';
 import gmailIcon from './gmail-svgrepo-com.svg';
-import linkedinIcon from './linkedin-svgrepo-com2.svg';
+import linkedinIcon from './linkedin-svgrepo-com.svg';
 import whatsappIcon from './whatsapp-svgrepo-com.svg';
 
 
